@@ -1,0 +1,26 @@
+# I'll add actual docs later
+gitRepoUrl = "https://github.com/JovanniJovanni/LuauUtils"
+gitSourceBranch = "main"
+
+[[navbar.items]]
+href = "https://discord.gg/mhtGUS8"
+label = "Discord"
+position = "right"
+
+[home]
+enabled = true
+includeReadme = false
+
+[docusaurus]
+url = "https://jovannijovanni.github.io"
+baseUrl = "/Utils/"
+tagline = "Luau Utils"
+
+
+[[classOrder]]
+section = "Random"
+classes = ["WeightedRandom"]
+
+[[classOrder]]
+section = "DataStructures"
+classes = ["Queue", "Stack"]
