@@ -7,4 +7,8 @@ local function Symbol(name: string)
 end
 
 
-return Symbol
+return setmetatable({new = Symbol}, {
+	__call = function(_, name)
+		return Symbol(name)
+	end
+})

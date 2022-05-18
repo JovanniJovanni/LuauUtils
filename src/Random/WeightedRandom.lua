@@ -28,6 +28,7 @@ export type Item<T> = {
 	A class used to create Weighted Randoms.
 ]=]
 local WeightedRandom = {}
+WeightedRandom.__index = WeightedRandom
 
 local function getWeight(List : {Item<any>}) : number
 	local totalWeight = 0
@@ -62,45 +63,27 @@ end
 	@return Type<T>
 ]=]
 function WeightedRandom.new<T>(Objects : {Item<T>}, seed : number?)
-	local self = {}
+	return setmetatable({
 
-	self.Items = Objects
-	self.Weight = getWeight(Objects)
+		Items = Objects,
+		Weight = getWeight(Objects),
 
-	self._rng = Random.new(seed)
+		_rng = Random.new(seed)
 
-	return self
+	}, WeightedRandom)
 end
 
-type WeightedRandom<T> = typeof(WeightedRandom.new({} :: {Item<T>}))
-
---[=[
-	@param item Item<T>
-	
-	Adds an item to a weighted random object's Items property.
-]=]
-function WeightedRandom.AddItem<T>(self : WeightedRandom<T>, item : Item<T>)
-	table.insert(self.Items, item)
-	self.Weight = getWeight(self.Items)
-end
-
---[=[
-	Destroys a weighted random object.
-]=]
-function WeightedRandom.Destroy<T>(self : WeightedRandom<T>)
-	table.clear(self)
-	setmetatable(self, nil)
-end
-
+type WeightedRandom<T> = typeof(WeightedRandom.new({} :: {Item<T>}, 0))
 
 --[=[
 	Returns a random item's Value from the object's Items property.
 
+	@method getItem
 	@within WeightedRandom
 	@return T
 ]=]
 
-function WeightedRandom.GetItem<T>(self : WeightedRandom<T>) : T
+function WeightedRandom.getItem<T>(self : Type<T>) : T
 	local pastPercent = 0
 	local chosen
 	for _, item : Item<T> in pairs(self.Items) do
@@ -115,12 +98,13 @@ function WeightedRandom.GetItem<T>(self : WeightedRandom<T>) : T
 end
 
 --[=[
-	@return Array<Item<T>>
+	@method getItems
 	@within WeightedRandom
+	@return Array<Item<T>>
 	
 	A weighted random object's Items property.
 ]=]
-function WeightedRandom.GetItems<T>(self : WeightedRandom<T>) : {Item<T>}
+function WeightedRandom.getItems<T>(self : Type<T>) : {Item<T>}
 	return self.Items
 end
 
@@ -130,24 +114,8 @@ end
 	
 	A weighted random object's Weight property.
 ]=]
-function WeightedRandom:GetWeight() : number
+function WeightedRandom:getWeight() : number
 	return self.Weight
-end
-
-
---[=[
-	@param i number | Item<T>
-	@within WeightedRandom
-
-	
-	Removes an item from a weighted random object using its index or .
-]=]
-function WeightedRandom.RemoveItem<T>(self : WeightedRandom<T>, i : number | Item<T>)
-	if type(i) == "number" then
-		table.remove(self.Items)
-	else
-		table.remove(self.Items, table.find(self, i))
-	end
 end
 
 return WeightedRandom
