@@ -166,5 +166,13 @@ function Math.summation(i : number, n : number, callbackFn : (number, number) ->
 	return sum
 end
 
+--[=[
+	@param x number
+	@return number
+	Removes the decimal places of x.
+	]=]
+function Math.trunc(x : number) : number
+	return if x % 1 < 0.5 then math.floor(x) else math.ceil(x)
+end
 
 return Math
