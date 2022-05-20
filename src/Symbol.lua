@@ -4,9 +4,8 @@
 ]=]
 local Symbol = {}
 --[=[
-	@type Type
+	@type Type { @metatable: Symbol }
 	@within Symbol
-
 ]=]
 
 

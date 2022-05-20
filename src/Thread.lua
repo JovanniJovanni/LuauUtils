@@ -6,7 +6,7 @@ local Thread = {}
 Thread.__index = Thread
 
 --[=[
-	@type Type
+	@type Type { _coroutine : thread, @metatable: Thread}
 	@within Thread
 ]=]
 export type Type = Thread
@@ -50,8 +50,8 @@ end
 	@return "dead" | "running" | "suspended" | "normal"
 	Returns the thread's status.
 ]=]
-function Thread:getStatus() : "dead" | "running" | "suspended" | "normal"
-	return coroutine.status(self._coroutine) :: "dead" | "running" | "suspended" | "normal"
+function Thread:getStatus()-- : "dead" | "running" | "suspended" | "normal"
+	return coroutine.status(self._coroutine)-- :: "dead" | "running" | "suspended" | "normal"
 end
 
 --[=[
