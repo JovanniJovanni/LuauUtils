@@ -11,6 +11,15 @@ Stack.__index = Stack
 export type Type<T> = Stack<T>
 
 --[=[
+	@param object any
+	@return boolean
+	Returns true if the object is a Stack
+]=]
+function Stack.Is(object : any) : boolean
+	return type(object) == "table" and getmetatable(object) == Stack
+end
+
+--[=[
 	@param ... T -- Items already in the stack
 
 	Creates a new stack object.

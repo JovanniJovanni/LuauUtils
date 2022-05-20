@@ -54,6 +54,14 @@ end
 	The total weight of all items in a weighted random object.
 ]=]
 
+--[=[
+	@param object any
+	@return boolean
+	Returns true if the object is a WeightedRandom
+]=]
+function WeightedRandom.Is(object : any) : boolean
+	return type(object) == "table" and getmetatable(object) == WeightedRandom
+end
 
 --[=[
 	Create a new WeightedRandom object from Array<Item<T>> Objects.

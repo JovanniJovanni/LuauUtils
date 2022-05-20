@@ -11,6 +11,15 @@ Queue.__index = Queue
 export type Type<T> = Queue<T>
 
 --[=[
+	@param object any
+	@return boolean
+	Returns true if the object is a Queue
+]=]
+function Queue.Is(object : any) : boolean
+	return type(object) == "table" and getmetatable(object) == Queue
+end
+
+--[=[
 	@within Queue
 	@param ... T -- Items already in the queue
 	@return Type<T>
