@@ -3,19 +3,37 @@
 ]=]
 local ColorUtils = {}
 
+--[=[
+	@interface HSV
+	.h number
+	.s number
+	.v number
+	@within ColorUtils
+]=]
 export type HSV = {
 	h : number,
 	s : number,
 	v : number
 }
 
+--[=[
+	@interface HSV
+	.r number
+	.g number
+	.b number
+	@within ColorUtils
+]=]
 export type RGB = {
 	r : number,
 	g : number,
 	b : number
 }
 
-
+--[=[
+	@param rgb RGB
+	@return HSV
+	Converts an RGB color to HSV.
+]=]
 function ColorUtils.RBGtoHSV(rgb : RGB) : HSV
 	local maxc = math.max(unpack(rgb))
 	local minc = math.min(unpack(rgb))
@@ -42,7 +60,11 @@ function ColorUtils.RBGtoHSV(rgb : RGB) : HSV
 	return {h = h, s = s, v = v}
 end
 
-
+--[=[
+	@param hsv HSV
+	@return RGB
+	Converts an HSV color to RGB.
+]=]
 function ColorUtils.HSVtoRGB(hsv : HSV) : RGB
 	if hsv.s == 0 then return {r = hsv.v, g = hsv.v, b = hsv.v} end
 
