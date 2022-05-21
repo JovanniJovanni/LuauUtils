@@ -13,7 +13,7 @@ includeReadme = false
 
 [docusaurus]
 url = "https://jovannijovanni.github.io"
-baseUrl = "/Utils/"
+baseUrl = "/LuauUtils/"
 tagline = "Luau Utils"
 
 [[classOrder]]
