@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="generator" content="Docusaurus v2.0.0-beta.9">
+<title data-react-helmet="true">Iterators | LuauUtils</title><meta data-react-helmet="true" property="og:title" content="Iterators | LuauUtils"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:url" content="https://jovannijovanni.github.io/LuauUtils/api/Iterators"><meta data-react-helmet="true" name="docusaurus_locale" content="en"><meta data-react-helmet="true" name="docusaurus_tag" content="default"><link data-react-helmet="true" rel="canonical" href="https://jovannijovanni.github.io/LuauUtils/api/Iterators"><link data-react-helmet="true" rel="alternate" href="https://jovannijovanni.github.io/LuauUtils/api/Iterators" hreflang="en"><link data-react-helmet="true" rel="alternate" href="https://jovannijovanni.github.io/LuauUtils/api/Iterators" hreflang="x-default"><link rel="stylesheet" href="/LuauUtils/assets/css/styles.302001c7.css">
+<link rel="preload" href="/LuauUtils/assets/js/runtime~main.eaa71fce.js" as="script">
+<link rel="preload" href="/LuauUtils/assets/js/main.ecf078d1.js" as="script">
+</head>
+<body>
+<script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
+<div><a href="#" class="skipToContent_1oUP">Skip to main content</a></div><nav class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Navigation bar toggle" class="navbar__toggle clean-btn" type="button" tabindex="0"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/LuauUtils/"><b class="navbar__title">LuauUtils</b></a><a class="navbar__item navbar__link" href="/LuauUtils/docs/intro">Docs</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/LuauUtils/api/">API</a></div><div class="navbar__items navbar__items--right"><a href="https://discord.gg/mhtGUS8" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link"><span>Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_3J9K"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></span></a><a href="https://github.com/JovanniJovanni/LuauUtils" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link"><span>GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_3J9K"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></span></a><div class="toggle_71bT toggle_3Zt9 toggleDisabled_3cF-"><div class="toggleTrack_32Fl" role="button" tabindex="-1"><div class="toggleTrackCheck_3lV7"><span class="toggleIcon_O4iE">🌜</span></div><div class="toggleTrackX_S2yS"><span class="toggleIcon_O4iE">🌞</span></div><div class="toggleTrackThumb_xI_Z"></div></div><input type="checkbox" class="toggleScreenReader_28Tw" aria-label="Switch between dark and light mode"></div><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Press S to Search..." aria-label="Search" class="navbar__search-input search-bar"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div class="main-wrapper docPageContainer_2Kz0"><div class="docPage_1bdk"><div class="docSidebarContainer_1ykS"><div class="sidebar_15mo"><nav class="menu thin-scrollbar menu_Bmed"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><a class="menu__link menu__link--sublist" href="#">Color</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><a class="menu__link menu__link--sublist" href="#">DataStructures</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><a class="menu__link menu__link--sublist" href="#">Random</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/LuauUtils/api/Iterators">​Iterators</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/LuauUtils/api/Math">​Math</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/LuauUtils/api/Memoize">​Memoize</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/LuauUtils/api/Symbol">​Symbol</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/LuauUtils/api/Thread">​Thread</a></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_1CGd"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_3E-R"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div><main class="docMainContainer_28N5"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_3WPG"><div class="docItemContainer_3XDu"><article><div class="member_qHIL markdown"><div class="tocCollapsible_1PrD theme-doc-toc-mobile tocMobile_3ryM"><button type="button" class="clean-btn tocCollapsibleButton_2O1e">On this page</button></div><header><h1 class="docTitle_1ddc" style="text-decoration:none"><span style="display:inline-block">Iterators</span></h1><div class="luaClassTags_2Zrs"></div><div></div></header><h2 class="anchor anchorWithStickyNavbar_31ik" id="types">Types<a aria-hidden="true" class="hash-link" href="#types" title="Direct link to heading">​</a></h2><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="Iterator&lt;T...&gt;"><code style="text-decoration:none">Iterator&lt;T...&gt;</code><a aria-hidden="true" class="hash-link" href="#Iterator&lt;T...&gt;" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/JovanniJovanni/LuauUtils/blob/main/src/Iterators.lua#L10"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code class="purple__nFc">type</code> <code>Iterator&lt;T...&gt;<!-- --> = </code> <code class="purple__nFc">(</code><code class="purple__nFc">)</code><code class="purple__nFc"> → </code><code class="purple__nFc">(</code><code class="blue_2Afy">T...</code><code class="purple__nFc">)</code><code class="blue_2Afy">?</code></div><div></div><h2 class="anchor anchorWithStickyNavbar_31ik" id="functions">Functions<a aria-hidden="true" class="hash-link" href="#functions" title="Direct link to heading">​</a></h2><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="range"><code style="text-decoration:none">range</code><a aria-hidden="true" class="hash-link" href="#range" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/JovanniJovanni/LuauUtils/blob/main/src/Iterators.lua#L29"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Iterators<!-- -->.</code><code class="green_3LnD">range</code><code>(</code><div class="inset_2cJr"><div><code>min<!-- -->: </code><code class="blue_2Afy">number</code><code>,</code></div><div><code>max<!-- -->: </code><code class="blue_2Afy">number</code><code>,</code></div><div><code>step<!-- -->: </code><code class="blue_2Afy">number?</code><code class="blue_2Afy">=</code><code class="blue_2Afy">1</code></div></div><code>) → </code><code class="blue_2Afy">Iterator</code><code class="op_1JtD">&lt;</code><code class="blue_2Afy">number?</code><code class="op_1JtD">&gt;</code></div><div>
+<pre class="language-lua"><code class="language-lua">	<span class="token keyword">for</span> i <span class="token operator">=</span> min<span class="token punctuation">,</span> max<span class="token punctuation">,</span> step <span class="token keyword">do</span>
+
+	<span class="token keyword">end</span>
+
+	<span class="token comment">-- Is equivalent to:</span>
+
+	<span class="token keyword">for</span> i <span class="token keyword">in</span> Iterators<span class="token punctuation">.</span><span class="token function">range</span><span class="token punctuation">(</span>min<span class="token punctuation">,</span> max<span class="token punctuation">,</span> step<span class="token punctuation">)</span> <span class="token keyword">do</span>
+
+	<span class="token keyword">end</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="map"><code style="text-decoration:none">map</code><a aria-hidden="true" class="hash-link" href="#map" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/JovanniJovanni/LuauUtils/blob/main/src/Iterators.lua#L61"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Iterators<!-- -->.</code><code class="green_3LnD">map</code><code>(</code><div class="inset_2cJr"><div><code>arr<!-- -->: </code><code class="purple__nFc">{</code><code class="blue_2Afy">T</code><code class="purple__nFc">}</code><code>,</code></div><div><code>callbackFn<!-- -->: </code><code class="purple__nFc">(</code><div class="inset_2cJr"><code class="blue_2Afy">T</code><code class="purple__nFc">,</code></div><div class="inset_2cJr"><code class="blue_2Afy">K...</code></div><code class="purple__nFc">)</code><code class="purple__nFc"> → </code><code class="blue_2Afy">V</code><code>,</code></div><div><code>...<!-- -->: </code><code class="blue_2Afy">K...</code></div></div><code>) → </code><code class="blue_2Afy">Iterator</code><code class="op_1JtD">&lt;</code><code class="blue_2Afy">V</code><code class="op_1JtD">&gt;</code></div><div>
+<p>Returns an iterator that applies callbackFn to each element of arr. Additional parameters will be passed to callbackFn.</p>
+<pre class="language-lua"><code class="language-lua">	<span class="token keyword">local</span> arr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span>
+	<span class="token keyword">local</span> sum <span class="token operator">=</span> <span class="token number">0</span>
+	<span class="token keyword">for</span> i <span class="token keyword">in</span> Iterators<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+		sum <span class="token operator">+</span><span class="token operator">=</span> i
+	<span class="token keyword">end</span><span class="token punctuation">)</span>
+	<span class="token function">print</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span>
+	<span class="token comment">-- Output:</span>
+	<span class="token comment">-- 1</span>
+	<span class="token comment">-- 3</span>
+	<span class="token comment">-- 6</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="zip"><code style="text-decoration:none">zip</code><a aria-hidden="true" class="hash-link" href="#zip" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/JovanniJovanni/LuauUtils/blob/main/src/Iterators.lua#L93"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Iterators<!-- -->.</code><code class="green_3LnD">zip</code><code>(</code><div class="inset_2cJr"><div><code>arr1<!-- -->: </code><code class="purple__nFc">{</code><code class="blue_2Afy">T</code><code class="purple__nFc">}</code><code>,</code></div><div><code>arr2<!-- -->: </code><code class="purple__nFc">{</code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code></div></div><code>) → </code><code class="blue_2Afy">Iterator</code><code class="op_1JtD">&lt;</code><code class="blue_2Afy">T,</code><code class="blue_2Afy">V</code><code class="op_1JtD">&gt;</code></div><div>
+<p>Returns an iterator that returns each element of the arrays in parallel.</p>
+<pre class="language-lua"><code class="language-lua">	<span class="token keyword">local</span> arr1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span>
+	<span class="token keyword">local</span> arr2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">}</span>
+	<span class="token keyword">for</span> i<span class="token punctuation">,</span> j <span class="token keyword">in</span> Iterators<span class="token punctuation">.</span><span class="token function">zip</span><span class="token punctuation">(</span>arr1<span class="token punctuation">,</span> arr2<span class="token punctuation">)</span> <span class="token keyword">do</span>
+		<span class="token function">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> j<span class="token punctuation">)</span>
+	<span class="token keyword">end</span>
+	<span class="token comment">-- Output:</span>
+	<span class="token comment">-- 1 4</span>
+	<span class="token comment">-- 2 5</span>
+	<span class="token comment">-- 3 6</span>
+</code></pre>
+</div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;range&quot;,
+            &quot;desc&quot;: &quot;```lua\n\tfor i = min, max, step do\n\n\tend\n\n\t-- Is equivalent to:\n\n\tfor i in Iterators.range(min, max, step) do\n\n\tend\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;min&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;max&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;step&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number? = 1&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Iterator&lt;number?&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 29,
+                &quot;path&quot;: &quot;src/Iterators.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;map&quot;,
+            &quot;desc&quot;: &quot;Returns an iterator that applies callbackFn to each element of arr. Additional parameters will be passed to callbackFn.\n\n```lua\n\tlocal arr = {1, 2, 3}\n\tlocal sum = 0\n\tfor i in Iterators.map(arr, function(i)\n\t\tsum += i\n\tend)\n\tprint(sum)\n\t-- Output:\n\t-- 1\n\t-- 3\n\t-- 6\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;arr&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;{T}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;callbackFn&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;(T, K...) -&gt; V&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;...&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;K...&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Iterator&lt;V&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 61,
+                &quot;path&quot;: &quot;src/Iterators.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;zip&quot;,
+            &quot;desc&quot;: &quot;Returns an iterator that returns each element of the arrays in parallel.\n\n```lua\n\tlocal arr1 = {1, 2, 3}\n\tlocal arr2 = {4, 5, 6}\n\tfor i, j in Iterators.zip(arr1, arr2) do\n\t\tprint(i, j)\n\tend\n\t-- Output:\n\t-- 1 4\n\t-- 2 5\n\t-- 3 6\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;arr1&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;{T}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;arr2&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;{V}&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Iterator&lt;T, V&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 93,
+                &quot;path&quot;: &quot;src/Iterators.lua&quot;
+            }
+        }
+    ],
+    &quot;properties&quot;: [],
+    &quot;types&quot;: [
+        {
+            &quot;name&quot;: &quot;Iterator&lt;T...&gt;&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;lua_type&quot;: &quot;() -&gt; (T...)?&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 10,
+                &quot;path&quot;: &quot;src/Iterators.lua&quot;
+            }
+        }
+    ],
+    &quot;name&quot;: &quot;Iterators&quot;,
+    &quot;desc&quot;: &quot;&quot;,
+    &quot;source&quot;: {
+        &quot;line&quot;: 4,
+        &quot;path&quot;: &quot;src/Iterators.lua&quot;
+    }
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_35-E thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#Iterator&lt;T...&gt;" class="table-of-contents__link toc-highlight">Iterator<t...></t...></a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#map" class="table-of-contents__link toc-highlight">.map</a></li><li><a href="#range" class="table-of-contents__link toc-highlight">.range</a></li><li><a href="#zip" class="table-of-contents__link toc-highlight">.zip</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022 JovanniJovanni. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
+<script src="/LuauUtils/assets/js/runtime~main.eaa71fce.js"></script>
+<script src="/LuauUtils/assets/js/main.ecf078d1.js"></script>
+</body>
+</html>
