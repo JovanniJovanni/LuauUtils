@@ -8,18 +8,27 @@ local Generator = {}
 Generator.__index = Generator
 
 --[=[
-	@type Type<T...>
+	@interface Type
+
+	.isDone : () -> boolean,
+	.next : () -> any,
 	@within Generator
 ]=]
 export type Type<T...> = Generator<T...>
 
+--[=[
+	@param object any
+	@return boolean
+	
+	Returns true if the object is a generator.
+]=]
 function Generator.Is(object : any) : boolean
 	return type(object) == "table" and object.__index == Generator
 end
 
 --[=[
 	@param callbackFn (yield : (T...) -> ()) -> ()
-	@returns Generator<T...>
+	@return Generator<T...>
 
 	Creates a new generator.
 
@@ -47,6 +56,8 @@ type Generator<T...> = typeof(Generator.new(
 ))
 
 --[=[
+	@method next
+	@within Generator
 	@return T...
 
 	Resumes the generator and returns the value passed to `yield`.
@@ -56,7 +67,9 @@ function Generator.next<T...>(self : Generator<T...>) : T...
 end
 
 --[=[
-	@return Boolean
+	@method isDone
+	@within Generator
+	@return boolean
 
 	Returns true if the generator has finished or errored.
 ]=]

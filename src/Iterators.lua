@@ -9,35 +9,6 @@ local Iterators = {}
 ]=]
 
 --[=[
-	@param min number
-	@param max number
-	@param step number? = 1
-	@return Iterator<number?>
-
-	```lua
-		for i = min, max, step do
-
-		end
-
-		-- Is equivalent to:
-
-		for i in Iterators.range(min, max, step) do
-
-		end
-	```
-]=]
-function Iterators.range(min : number, max : number, step : number?) : () -> number?
-	assert(min and max, "Range function must have two values passed.")
-
-	local i = min - 1
-	return function()
-		i += step or 1
-		return (i <= max and i) or nil
-	end
-end
-
-
---[=[
 	@param arr {T}
 	@param callbackFn (T, K...) -> V
 	@param ... K...

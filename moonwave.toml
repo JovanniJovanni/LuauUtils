@@ -17,12 +17,8 @@ baseUrl = "/LuauUtils/"
 tagline = "Luau Utils"
 
 [[classOrder]]
-section = "Color"
-classes = ["ColorUtils"]
-
-[[classOrder]]
 section = "DataStructures"
-classes = ["Queue", "Stack"]
+classes = ["Queue", "Stack", "Set"]
 
 [[classOrder]]
 section = "Random"
