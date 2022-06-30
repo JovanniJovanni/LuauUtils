@@ -9,7 +9,7 @@ position = "right"
 
 [home]
 enabled = true
-includeReadme = false
+includeReadme = true
 
 [docusaurus]
 url = "https://jovannijovanni.github.io"
